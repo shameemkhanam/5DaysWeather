@@ -16,6 +16,7 @@ body{
   border-radius: 30px;
 }
 .cardsm_bg{
+  width: 15rem; height: 15rem;
   background-color: rgba(131, 147, 238, 0.3);
   /* background-image: url(./images/benga.png); */
   border-radius: 30px;
@@ -78,15 +79,15 @@ input{
 }
 
 /* NEXT */
-#weatherContainer{
+.w-container{
   position: absolute;
   top: 75%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
   height: 300px;
-  width: 1400px;
-  border: 5px solid rgba(97, 95, 95, 0.829);    
+  width: 80%;  
+  border: 2px solid rgba(97, 95, 95, 0.829);    
   border-radius: 10px;
 }
 
@@ -138,7 +139,8 @@ input{
   width: 85px;
   margin: 0;
   margin-bottom: 5px;
-  margin-left: 5px;
+  /* margin-left: 5px; */
+  font-size: 16px;
 }
 
 
@@ -150,5 +152,21 @@ input{
   width: 85px;
   margin: 0;
   margin-bottom: 5px;
-  margin-left: 5px;
+  /* margin-left: 5px; */
+  font-size: 16px;
+
+}
+
+@media screen and (max-width: 480px) {
+  .cardsm_bg{
+    width: 4rem; 
+  }
+  
+}
+
+@media screen and (max-width: 600px) {
+  .cardsm_bg{
+    width: 6rem; 
+  }
+  
 }
