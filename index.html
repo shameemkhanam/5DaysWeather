@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="vw-100 vw-100" onload="DefaultScreen()">
+    <h2 class="text-center text-white mt-3"><u>5 Days Weather Forecast</u></h2>
+    <div class="container mt-2 p-2">
+      <div class="d-flex align-item-center justify-content-center">
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Enter City Name"
+            id="search-input"
+            required
+            autocomplete="off"
+          />
+          <button
+            class="btn btn-primary border border-dark border-2"
+            id="search-button"
+          >
+            <i class="fas fa-search"></i> <b>Search</b>
+          </button>
+        </form>
+      </div>
+
+      <div class="d-flex align-item-center justify-content-center">
+        <div
+          class="card-sm text-center shadow-lg card_bg"
+          style="width: 25rem; height: 15rem"
+        >
+          <div class="card-body">
+            <div id="location">
+              <p>-------</p>
+            </div>
+
+            <div id="temp">
+              <img src="./images/sun.png" alt="" id="temp-icon" width="20%" />
+
+              <p>
+                <span id="temp-value">-----</span
+                ><span id="temp-unit">&#176;C</span>
+              </p>
+            </div>
+
+            <div id="climate">
+              <p>-----</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="d-flex align-items-center justify-content-around">
+      <div class="card-sm text-center cardsm_bg" style="width: 15rem; height: 15rem">
+        <div class="card-header text-white">
+          <p class="weather" id="day1"></p>
+        </div>
+        <div class="card-body">
+          <div class="image"><img src="./images/dots.png"  alt="" id="img1" width="15%" class="imgClass" /></div>
+          <br /><br />
+          <p class="minValues text-white" id="day1Min">Loading...</p>
+          <p class="maxValues text-white" id="day1Max">Loading...</p>
+        </div>
+      </div>
+      <div class="card-sm text-center cardsm_bg" style="width: 15rem; height: 15rem">
+        <div class="card-header text-white">
+          <p class="weather" id="day2"></p>
+        </div>
+        <div class="card-body">
+          <div class="image"><img src="./images/dots.png"  alt="" id="img2" width="15%" class="imgClass" /></div>
+          <br /><br />
+          <p class="minValues text-white" id="day2Min">Loading...</p>
+          <p class="maxValues text-white" id="day2Max">Loading...</p>
+        </div>
+      </div>
+      <div class="card-sm text-center cardsm_bg" style="width: 15rem; height: 15rem">
+        <div class="card-header text-white">
+          <p class="weather" id="day3"></p>
+        </div>
+        <div class="card-body">
+          <div class="image"><img src="./images/dots.png"  alt="" id="img3" width="15%" class="imgClass" /></div>
+          <br /><br />
+          <p class="minValues text-white" id="day3Min">Loading...</p>
+          <p class="maxValues text-white" id="day3Max">Loading...</p>
+        </div>
+      </div>
+      <div class="card-sm text-center cardsm_bg" style="width: 15rem; height: 15rem">
+        <div class="card-header text-white">
+          <p class="weather" id="day4"></p>
+        </div>
+        <div class="card-body">
+          <div class="image"><img src="./images/dots.png"  alt="" id="img4" width="15%" class="imgClass" /></div>
+          <br /><br />
+          <p class="minValues text-white" id="day4Min">Loading...</p>
+          <p class="maxValues text-white" id="day4Max">Loading...</p>
+        </div>
+      </div>
+      <div class="card-sm text-center cardsm_bg" style="width: 15rem; height: 15rem">
+        <div class="card-header text-white">
+          <p class="weather" id="day5"></p>
+        </div>
+        <div class="card-body">
+          <div class="image"><img src="./images/dots.png"  alt="" id="img5" width="15%" class="imgClass" /></div>
+          <br /><br />
+          <p class="minValues text-white" id="day5Min">Loading...</p>
+          <p class="maxValues text-white" id="day5Max">Loading...</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/c4ad973a2c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
